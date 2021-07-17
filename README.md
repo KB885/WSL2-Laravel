@@ -58,7 +58,8 @@ Restart MySQL and you should be good to go.
 
     $ sudo service mysql restart
 
-
+## Connect to the sql & create your database
+<img src="https://i.imgur.com/STcRdu0.png" style="width:250px;" />
 
 
 
