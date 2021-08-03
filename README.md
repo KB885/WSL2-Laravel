@@ -1,6 +1,8 @@
 # WSL2-Laravel
 WSL2 Laravel setup with SQL. 
 
+This method is setting up Laravel on WSL2 without Docker. However, there is a downside and that is editing the hostfile each time making a new project, in order to reach it. 
+
 ## WSL2 (PHP, MySQL, Composer, Valet)
 Updatet & Upgrade the wsl
 
@@ -29,7 +31,7 @@ Move composer.phar into a directory on your PATH.
 Install valet
 
     composer global require cpriego/valet-linux
-    echo 'export PATH="$HOME/.config/composer/vendor/bin"' >> ~/.profile
+    echo 'export PATH="$PATH:$HOME/.config/composer/vendor/bin"' >> ~/.profile
     source ~/.profile
     valet install
     
@@ -43,7 +45,6 @@ Create a project
 And that is about it. However, whenever you need to access your created laravel project, you have to add your appname.test, to the host file. Like this:
     
     127.0.0.1 appname.test
-
 
 
 ## MySQL
