@@ -22,6 +22,10 @@ Install composer (https://getcomposer.org/download/)
     php composer-setup.php
     php -r "unlink('composer-setup.php');"
     
+Move composer.phar into a directory on your PATH.
+
+    sudo mv composer.phar /usr/local/bin/composer
+    
 Install valet
 
     composer global require cpriego/valet-linux
