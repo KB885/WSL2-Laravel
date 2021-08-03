@@ -41,6 +41,12 @@ Create a project
     valet park
     composer create-project --prefer-dist laravel/laravel appstuff
     
+-----
+
+In case of DNS problems, this gentleman found a workaround. <br>
+https://github.com/microsoft/WSL/issues/4285#issuecomment-522201021
+
+-----
 
 And that is about it. However, whenever you need to access your created laravel project, you have to add your appname.test, to the host file. Like this:
     
