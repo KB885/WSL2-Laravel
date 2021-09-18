@@ -46,6 +46,37 @@ Create a project
 In case of DNS problems, this gentleman found a workaround. <br>
 https://github.com/microsoft/WSL/issues/4285#issuecomment-522201021
 
+
+> 
+> 
+> My workaround:
+> 
+>     1. Create a file: `/etc/wsl.conf`.
+> 
+>     2. Put the following lines in the file
+> 
+> 
+> ```
+> [network]
+> generateResolvConf = false
+> ```
+> 
+>     1. In a `cmd` window, run `wsl --shutdown`
+> 
+>     2. Restart WSL2
+> 
+>     3. Create a file: `/etc/resolv.conf`. If it exists, replace existing one with this new file.
+> 
+>     4. Put the following lines in the file
+> 
+> 
+> ```
+> nameserver 8.8.8.8
+> ```
+> 
+>     1. Repeat step 3 and 4. You will see `git` working fine now.
+
+
 -----
 
 And that is about it. However, whenever you need to access your created laravel project, you have to add your appname.test, to the host file. Like this:
