@@ -84,6 +84,12 @@ And that is about it. However, whenever you need to access your created laravel 
     127.0.0.1 appname.test
 
 
+## Getting MySQL running and PHP
+
+I have uploaded a bash script that simply starts valet, php & mysql services. The script needs to be run everytime the WSL2 starts, because for whatever reason MySQL do not like to keep being shutdown or something. 
+
+https://github.com/KB885/WSL2-Laravel/blob/main/laravel.sh
+
 ## MySQL
 
     sudo mysql -u root
